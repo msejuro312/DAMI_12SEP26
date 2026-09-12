@@ -92,8 +92,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_descripcion"
-                android:layout_marginTop="6dp"
-                android:textColor="@color/gris_texto"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/azul_oscuro"
                 android:textSize="14sp"
                 android:textStyle="bold"/>
 
@@ -104,15 +104,102 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_field"
                 android:hint="@string/hint_descripcion"
-                android:inputType="textCapWords"
-                android:minHeight="56dp"
+                android:inputType="textCapSentences|textMultiLine"
+                android:minHeight="96dp"
                 android:padding="@dimen/field_padding"
                 android:textColor="@color/azul_oscuro"
                 android:textColorHint="@color/gris_hint"/>
 
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_direccion"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/azul_oscuro"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <EditText
+
+                android:id="@+id/editTextDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_field"
+                android:hint="@string/hint_direccion"
+                android:inputType="textCapWords|textPostalAddress"
+                android:minHeight="56dp"
+                android:padding="@dimen/field_padding"
+                android:textColor="@color/azul_oscuro"
+                android:textColorHint="@color/gris_hint"/>
+            
+            <Button
+
+                android:id="@+id/buttonRegistrarServicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:backgroundTint="@color/azul_principal"
+                android:minHeight="56dp"
+                android:text="Registrar Servicio"
+                android:textAllCaps="false"
+                android:textColor="@color/blanco"
+                android:textStyle="bold"/>
+
 
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_surface_panel"
+            android:padding="@dimen/card_padding">
+
+            <TextView
+
+                android:id="@+id/textViewResumenTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/resumen_inicial_titulo"
+
+                android:textColor="@color/azul_oscuro"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+
+                android:id="@+id/textViewMensajeVisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mensaje_inicial"
+                android:textColor="@color/gris_texto"
+                android:textSize="14sp"
+                android:layout_marginTop="18dp"/>
+
+            <TextView
+
+                android:id="@+id/textViewResumenCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/resumen_cliente_placeholder"
+                android:textColor="@color/azul_oscuro"
+                android:textSize="16sp"
+                android:layout_marginTop="18dp"/>
+
+            <TextView
+
+                android:id="@+id/textViewResumenDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/resumen_descripcion_placeholder"
+                android:textColor="@color/azul_oscuro"
+                android:textSize="16sp"
+                android:layout_marginTop="18dp"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
